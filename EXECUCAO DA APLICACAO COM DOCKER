@@ -1,0 +1,11 @@
+Aluno: Luis Felipe Cardoso
+
+Evidencia 1-conteiner em exucução:
+docker ps
+(Evidencia 1)
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+
+Evidencia 2-Página personalizada
+curl http://localhost:8090
+(Evidencia 2)
+curl: (7) Failed to connect to localhost port 8090 after 0 ms: Couldn't connect to server
