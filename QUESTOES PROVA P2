@@ -1,0 +1,29 @@
+# PROVA-B2-COMPUTACAO-NUVEM
+
+Aluno: Luis Felipe Cardoso
+
+
+
+1-questao:
+r: esta no nível de controle responsabilidade e no tipo de controle responsabilidade e no tipo de recurso entregue ao usuário pela nuvem
+exemplo iaas: utilizar o Amazon Web Services (AWS) para alugar servidores virtuais
+exemplo saas:utilizar o Google Drive para armazenar, compartilhar e editar arquivos pela internet
+
+2-questao
+r: modelo nuvem hibrida
+
+3-questao:
+R:esta no nível de virtualização e na utilização do sistema operacional
+
+Interpretação dos resultados:
+1- qual e a diferança entre uma imagem docker e um conteiner em execuçao
+R: A imagem Docker é um modelo estático e somente leitura com o código, dependências e configurações da aplicação, enquanto o contêiner em execução é uma instância ativa e mutável criada a partir dessa imagem
+2- qual é a funçao de um deployment no kubernetes
+R:A função de um Deployment no Kubernetes é gerenciar de forma declarativa a criação, o escalonamento e a atualização de aplicações em contêineres 
+3- o que aconteceu quando voce exclui um pod? por que isso aconteceu
+R:
+4- qual é a finalidade de um service no kubernetes
+R:
+
+CONCLUSÃO:
+A atividade prática consolidou a complementaridade entre Docker e Kubernetes: o Docker garantiu o empacotamento padronizado e portátil da aplicação, enquanto o Kubernetes automatizou a orquestração, a escalabilidade e a alta disponibilidade dos contêineres. Juntas, essas tecnologias se mostraram essenciais para entregas ágeis e resilientes
