@@ -21,9 +21,9 @@ R: A imagem Docker é um modelo estático e somente leitura com o código, depen
 2- qual é a funçao de um deployment no kubernetes
 R:A função de um Deployment no Kubernetes é gerenciar de forma declarativa a criação, o escalonamento e a atualização de aplicações em contêineres 
 3- o que aconteceu quando voce exclui um pod? por que isso aconteceu
-R:
+R: No contexto de Kubernetes, quando você exclui um Pod, o comportamento do sistema depende de como esse Pod foi criado e gerenciado O que acontece: Ao executar o comando de exclusão (kubectl delete pod), o Kubernetes envia um sinal para encerrar os processos dentro daquele pod e o remove do cluster.
 4- qual é a finalidade de um service no kubernetes
-R:
+R:A finalidade de um Service no Kubernetes é expor um conjunto de Pods como um serviço de rede com um ponto de acesso estável (endereço IP e nome DNS), mesmo quando os Pods são criados, destruídos ou escalados
 
 CONCLUSÃO:
 A atividade prática consolidou a complementaridade entre Docker e Kubernetes: o Docker garantiu o empacotamento padronizado e portátil da aplicação, enquanto o Kubernetes automatizou a orquestração, a escalabilidade e a alta disponibilidade dos contêineres. Juntas, essas tecnologias se mostraram essenciais para entregas ágeis e resilientes
