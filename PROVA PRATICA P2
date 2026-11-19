@@ -20,3 +20,72 @@ Insira a saída do terminal mostrando a mensagem personalizada com seu nome.
 
 root@ubuntu:~/meu-site$ curl http://localhost:8090
 <h1>Atividade Docker -Luis Felipe Cardoso</h1>
+
+Evidência 3 - Deployment e Pod
+
+Comando utilizado:
+
+kubectl getpos
+
+Insira a saída do terminal mostrando o Pod criado.
+
+root@controlplane:~$ kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+meu-deployment-6b854844d7-58nwq   1/1     Running   0
+
+Evidencia 4 - Escalabilidade
+
+Comandos utilizados:
+
+kubectl scale deployment comunicado-web --replicas=3
+
+kubectl get pods
+
+Insira a evidência mostrando os três Pods da aplicação.
+
+root@controlplane:~$ kubectl scale deployment meu-deployment --replicas=3
+deployment.apps/meu-deployment scaled
+root@controlplane:~$ kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+meu-deployment-6b854844d7-58nwq   1/1     Running   0          18m
+meu-deployment-6b854844d7-cldqk   1/1     Running   0          17s
+meu-deployment-6b854844d7-gpk4d   1/1     Running   0          17s
+
+Evidência 5 - Autorrecuperação 
+
+Comandos utilizados:
+
+kubectl delete pod NOME_DO_POD
+
+kubectl get pods
+
+Insira a evidência mostrando que um novo pod foi criado após a exclusão.
+
+root@controlplane:~$ kubectl delete pod meu-deployment-6b854844d7-58nwq
+pod "meu-deployment-6b854844d7-58nwq" deleted from default namespace
+root@controlplane:~$ kubectl get pods
+NAME                              READY   STATUS    RESTARTS   AGE
+meu-deployment-6b854844d7-cldqk   1/1     Running   0          2m9s
+meu-deployment-6b854844d7-gpk4d   1/1     Running   0          2m9s
+meu-deployment-6b854844d7-q4jmt   1/1     Running   0 
+
+Evidência 6 - Service e acesso http
+
+Comandos utilizados:
+
+kubectl get services
+
+kubectl run teste --image=curlimages/curl --rm -it --restart=Never --curl http://comunicado-service
+
+
+root@controlplane:~$ kubectl get services
+NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   13d
+
+root@controlplane:~$ kubectl run teste --image=curlimages/curl --rm -it --restart=Never curl http://comunicado-service
+^[[Acurl: (6) Could not resolve host: comunicado-service
+All commands and output from this session will be recorded in container logs, including credentials and sensitive information passed through the command prompt.
+If you don't see a command prompt, try pressing enter.
+Session ended, resume using 'kubectl attach teste -c teste -n default -i -t' command
+pod "teste" deleted from default namespace
+pod default/teste terminated (Error)
