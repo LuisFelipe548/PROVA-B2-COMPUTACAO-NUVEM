@@ -4,18 +4,20 @@ Aluno: Luis Felipe Cardoso
 
 
 
-1-questao:
-r: esta no nível de controle responsabilidade e no tipo de controle responsabilidade e no tipo de recurso entregue ao usuário pela nuvem
+1-Qual é a diferença entre Iaas e SaaS? Cite um exemplo de utilização de cada modelo.
+R: esta no nível de controle responsabilidade e no tipo de controle responsabilidade e no tipo de recurso entregue ao usuário pela nuvem
 exemplo iaas: utilizar o Amazon Web Services (AWS) para alugar servidores virtuais
 exemplo saas:utilizar o Google Drive para armazenar, compartilhar e editar arquivos pela internet
 
-2-questao
-r: modelo nuvem hibrida
+2-Uma empresa utiliza servidores próprios e também recursos de um provedor de nuvem pública. Qual modelo de 
+implantação em nuvem essa empresa utiliza?
+R: modelo nuvem hibrida
 
-3-questao:
+3-Qual é a principal diferença entre uma máquina virtual e um contêiner?
 R:esta no nível de virtualização e na utilização do sistema operacional
 
-Interpretação dos resultados:
+                  Interpretação dos resultados:
+
 1- qual e a diferança entre uma imagem docker e um conteiner em execuçao
 
 R: A imagem Docker é um modelo estático e somente leitura com o código, dependências e configurações da aplicação, enquanto o contêiner em execução é uma instância ativa e mutável criada a partir dessa imagem
@@ -32,7 +34,7 @@ R: Quando eu exclui o Pod ele se recriou porém com um nome diferente, isso acon
 
 R:O Service no Kubernetes é permitir a comunicação e o acesso aos Pods fornecendo uma melhor forma de conexão mesmo quando os Pods são recriados.
 
-CONCLUSÃO:
+                                    CONCLUSÃO:
 Aprendi que o Docker é utilizado para criar e executar contêineres, permitindo rodar aplicações de forma isolada e organizada
 já o Kubernetes é responsável por gerenciar esses contêineres, controlar sua execução, escalabilidade e disponibilidade.
 Com a atividade prática, compreendi como as duas ferramentas trabalham juntas para facilitar a implantação e o gerenciamento de aplicações.
